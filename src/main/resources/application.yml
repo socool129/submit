@@ -1,25 +1,29 @@
-
-tomcat:
-  test-while-idle: true
-  validation-query: SELECT 1
-
 spring:
   profiles:
-    active: dev
+    active: local # 기본 환경 선택
 
-server:
-  compression:
-    enabled: true
-    min-response-size: 2048
-  servlet:
-    encoding:
-      charset: UTF-8
-
-thymeleaf:
-  cache: false
-
+# local 환경
 ---
 spring:
-  profiles: real;
+  profiles: local
+  datasource:
+    driver-class-name: org.h2.Driver  #h2 드라이버 설정
+    url: jdbc:h2:file:./test_db;AUTO_SERVER=TRUE  #접속 URL
+    username: sooyeon  # 사용자 이름 (로그인 시 사용)
+    password: sooyeon  # 사용자 암호 (로그인 시 사용)
+  h2:
+    console:
+      enabled: true
+      path: /test_db  # 콘솔의 경로
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      format_sql: true
+
+# 운영 환경
+---
+spring:
+  profiles: set1
 server:
-  port: 80
+  port: 8081

@@ -1,6 +1,7 @@
 # 카카오 Maps API를 이용한 장소 검색 서비스
 
 ## 설치 방법 (Installation)
+Condition : java 환경 설정 완료
 path : build/libs/searchplace.jar
 구동 : java -jar searchplace.jar
 테스트 : 브라우저

@@ -1,0 +1,25 @@
+
+tomcat:
+  test-while-idle: true
+  validation-query: SELECT 1
+
+spring:
+  profiles:
+    active: dev
+
+server:
+  compression:
+    enabled: true
+    min-response-size: 2048
+  servlet:
+    encoding:
+      charset: UTF-8
+
+thymeleaf:
+  cache: false
+
+---
+spring:
+  profiles: real;
+server:
+  port: 80

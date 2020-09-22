@@ -3,6 +3,10 @@
 ## 설치 방법 (Installation)
 Condition : java 환경 설정 완료
 path : build/libs/searchplace.jar
+ - JAR 파일은 2개의 분할압축으로 업로드 되어있음
+ - 두 개 모두 다운로드 (build/libs/SNAPSHOT.zip, build/libs/SNAPSHOT.z01)
+ - 압축풀기 : SNAPSHOT.zip
+ - SNAPSHOT 폴더 안에 searchplace.jar 위치
 구동 : java -jar searchplace.jar
 테스트 : 브라우저
 

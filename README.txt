@@ -48,3 +48,11 @@ path : build/libs/searchplace.jar
 	- URL : http://localhost:8080/signup
 	- 이미 등록된 ID를 입력할 경우 회원가입 페이지 재로딩
 	- 등록이 완료되면 localhost:8080/index로 이동
+
+## 외부라이브러리
+1. modlemapper
+ - libs/modelmapper-spring-2.3.0.jar
+ - Model entity와 dto의 mapping을 위해 사용
+2. jquery
+ - libs/jquery-3.5.1.min.js
+ - Ajax를 사용하기 위해 추가 (jquery 형식으로 통신)
